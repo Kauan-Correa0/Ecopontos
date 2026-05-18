@@ -3,16 +3,31 @@ package com.example.ecopontos.model;
 import java.io.Serializable;
 
 public class Usuario implements Serializable {
-    private int id;
+    private String id;
     private String nome;
     private String municipio;
     private int pontos, pontosTotais;
 
-    public int getId() {
+    public Usuario(String id, String nome, String municipio, int pontos, int pontosTotais) {
+        this.id = id;
+        this.nome = nome;
+        this.municipio = municipio;
+        this.pontos = pontos;
+        this.pontosTotais = pontosTotais;
+    }
+
+    public Usuario(String nome, String municipio, int pontos, int pontosTotais) {
+        this.nome = nome;
+        this.municipio = municipio;
+        this.pontos = pontos;
+        this.pontosTotais = pontosTotais;
+    }
+
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
