@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EcoPontos">
         <activity
+            android:name=".shop.LojaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".leaderboard.ClassificacaoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".tasks.TarefasActivity"
+            android:exported="false" />
+        <activity
             android:name=".auth.CadastroActivity"
             android:exported="false" />
         <activity
