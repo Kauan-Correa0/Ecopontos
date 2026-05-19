@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EcoPontos">
         <activity
+            android:name=".profile.PerfilActivity"
+            android:exported="false" />
+        <activity
             android:name=".shop.LojaActivity"
             android:exported="false" />
         <activity
