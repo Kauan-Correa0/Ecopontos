@@ -17,6 +17,7 @@
         android:gravity="center">
 
         <View
+            android:id="@+id/indicator_acoes"
             android:layout_width="match_parent"
             android:layout_height="3dp"
             android:background="#5CD67A"
@@ -45,6 +46,7 @@
         android:gravity="center">
 
         <View
+            android:id="@+id/indicator_ranking"
             android:layout_width="match_parent"
             android:layout_height="3dp"
             android:background="@android:color/transparent"
@@ -73,6 +75,7 @@
         android:gravity="center">
 
         <View
+            android:id="@+id/indicator_promocoes"
             android:layout_width="match_parent"
             android:layout_height="3dp"
             android:background="@android:color/transparent"

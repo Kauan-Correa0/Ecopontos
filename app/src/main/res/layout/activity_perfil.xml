@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F4F9F9"
@@ -24,6 +25,7 @@
                 android:layout_alignParentStart="true"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:contentDescription="Voltar"
+                android:onClick="voltar"
                 android:src="@android:drawable/ic_menu_revert"
                 app:tint="#000000" />
         </RelativeLayout>
@@ -43,11 +45,11 @@
                 android:src="@android:drawable/ic_menu_report_image" />
 
             <TextView
-                android:id="@+id/txt_nome_perfil"
+                android:id="@+id/tvNome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:text="Jhon Pessoa"
+                android:text="user"
                 android:textColor="#000000"
                 android:textSize="22sp"
                 android:textStyle="bold" />
@@ -56,8 +58,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
             android:orientation="horizontal"
             android:weightSum="3">
@@ -65,12 +67,12 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
                 android:layout_weight="1"
                 android:background="#66CC66"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="12dp"
-                android:layout_marginEnd="4dp">
+                android:padding="12dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -82,10 +84,11 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/tvPontos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="5000"
+                    android:text="0"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -94,12 +97,12 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
                 android:layout_weight="1"
                 android:background="#66CC66"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="12dp"
-                android:layout_marginEnd="4dp">
+                android:padding="12dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -111,10 +114,11 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/tvRanking"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="1"
+                    android:text="1°"
                     android:textColor="#FFFFFF"
                     android:textSize="22sp"
                     android:textStyle="bold" />
@@ -139,10 +143,11 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/tvPontosTotais"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="8200"
+                    android:text="0"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -162,12 +167,14 @@
                 android:layout_marginBottom="12dp"
                 app:cardCornerRadius="4dp"
                 app:cardElevation="2dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="#E8F1F2"
                     android:gravity="center_vertical"
-                    android:padding="12dp"
-                    android:background="#E8F1F2">
+                    android:padding="12dp">
+
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -176,12 +183,14 @@
                         android:textColor="#000000"
                         android:textSize="16sp"
                         android:textStyle="bold" />
+
                     <TextView
+                        android:id="@+id/tvAcoesFeitas"
                         android:layout_width="80dp"
                         android:layout_height="50dp"
                         android:background="#D1DEDF"
                         android:gravity="center"
-                        android:text="42"
+                        android:text="0"
                         android:textColor="#000000"
                         android:textSize="22sp"
                         android:textStyle="bold" />
@@ -194,12 +203,14 @@
                 android:layout_marginBottom="12dp"
                 app:cardCornerRadius="4dp"
                 app:cardElevation="2dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="#E8F1F2"
                     android:gravity="center_vertical"
-                    android:padding="12dp"
-                    android:background="#E8F1F2">
+                    android:padding="12dp">
+
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -208,12 +219,14 @@
                         android:textColor="#000000"
                         android:textSize="16sp"
                         android:textStyle="bold" />
+
                     <TextView
+                        android:id="@+id/tvAcoesMensais"
                         android:layout_width="80dp"
                         android:layout_height="50dp"
                         android:background="#D1DEDF"
                         android:gravity="center"
-                        android:text="5"
+                        android:text="0"
                         android:textColor="#000000"
                         android:textSize="22sp"
                         android:textStyle="bold" />
@@ -226,26 +239,30 @@
                 android:layout_marginBottom="12dp"
                 app:cardCornerRadius="4dp"
                 app:cardElevation="2dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="#E8F1F2"
                     android:gravity="center_vertical"
-                    android:padding="12dp"
-                    android:background="#E8F1F2">
+                    android:padding="12dp">
+
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Quantidade de\npromoções\ncompradas"
+                        android:text="Quantidade de\nações diárias feitas"
                         android:textColor="#000000"
                         android:textSize="16sp"
                         android:textStyle="bold" />
+
                     <TextView
+                        android:id="@+id/tvAcoesDiarias"
                         android:layout_width="80dp"
                         android:layout_height="50dp"
                         android:background="#D1DEDF"
                         android:gravity="center"
-                        android:text="79"
+                        android:text="0"
                         android:textColor="#000000"
                         android:textSize="22sp"
                         android:textStyle="bold" />
@@ -258,26 +275,30 @@
                 android:layout_marginBottom="12dp"
                 app:cardCornerRadius="4dp"
                 app:cardElevation="2dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="#E8F1F2"
                     android:gravity="center_vertical"
-                    android:padding="12dp"
-                    android:background="#E8F1F2">
+                    android:padding="12dp">
+
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="total de pontos\ngastos"
+                        android:text="Total de pontos\ngastos"
                         android:textColor="#000000"
                         android:textSize="16sp"
                         android:textStyle="bold" />
+
                     <TextView
+                        android:id="@+id/tvPontosGastos"
                         android:layout_width="80dp"
                         android:layout_height="50dp"
                         android:background="#D1DEDF"
                         android:gravity="center"
-                        android:text="1783"
+                        android:text="0"
                         android:textColor="#000000"
                         android:textSize="22sp"
                         android:textStyle="bold" />
@@ -289,10 +310,10 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="#D1DEDF"
             android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="30dp"
-            android:layout_marginTop="10dp"/>
+            android:background="#D1DEDF" />
 
     </LinearLayout>
 </ScrollView>
